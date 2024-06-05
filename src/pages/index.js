@@ -1,16 +1,16 @@
 import * as React from "react"
+import * as  styles from '../styles/home.module.css'
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Seo from "../components/seo"
-
 
 const IndexPage = () => (
   <Layout>
-    <div>
-      <h1>
-        Gatsby
-      </h1>
-    </div>
+    <section className={styles.header}>
+      <h2>Gatsby project</h2>
+      <h3>Develop & Deploy</h3>
+      <p>react web dev</p>
+    </section>
   </Layout>
 )
 

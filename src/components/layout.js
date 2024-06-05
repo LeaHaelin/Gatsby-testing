@@ -1,12 +1,7 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Navbar from "./Navbar"
+import '../styles/global.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,14 +16,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
+      <div className="layout">
+        <Navbar />
+        <main className="contents">{children}</main>
         <footer>
         </footer>
       </div>
@@ -37,3 +27,11 @@ const Layout = ({ children }) => {
 }
 
 export default Layout
+
+
+/**
+ * Layout component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
+ */
